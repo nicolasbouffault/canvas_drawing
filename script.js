@@ -1,4 +1,5 @@
 var canvas = document.getElementById("canvas");
+var buttonClear = document.getElementById("clear");
 var context = canvas.getContext("2d");
 var dragging = false;
 var radius = 10;
@@ -11,10 +12,8 @@ var radius = 10;
 	//canvas.putImageData(image,0,0);
 //}
 
-function clearCanvas(canvas){
-
-	canvas.width = canvas.width;
-
+function clearCanvas(){
+	context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
 context.lineWidth = radius*2;
@@ -64,4 +63,6 @@ function disengage(){
 canvas.addEventListener("mousedown", engage);
 canvas.addEventListener("mousemove", drawCircle);
 canvas.addEventListener("mouseup", disengage);
+buttonClear.addEventListener("click", clearCanvas);
+
 	

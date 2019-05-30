@@ -37,6 +37,7 @@ canvas{
 #rad
 {
 	float: left;
+	padding-top:6px;
 }
 
 #colors
@@ -59,16 +60,17 @@ canvas{
 	border: 2px solid #CCC;
 }
 
-#save
+#clear
 {
 	float: right;
 	margin-right: 20px;
 	background-color: #434343;
 	padding: 8px;
 	height: 30px;
+	cursor: pointer;
 }
 
-#save:hover
+#clear:hover
 {
 	background-color: #818181;
 }
